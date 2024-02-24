@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    font-weight: normal;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: gray;
+    background-image: url('img/large_landscape.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.content {
+    color: white;
+    margin-left: 1rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.navbar-brand {
+    height: 48px;
+}
+
+nav {
+    /* background-color: #1b232c; */
+    background-color: #221914; 
+}
+
+#nav-image {
+    margin-left: 20px;
+}
+
+
+
+
+
+
+

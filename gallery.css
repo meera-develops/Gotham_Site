@@ -1,0 +1,28 @@
+/*#8e443d (brown), #498c8a(cyan), #1b232c (black), #7c8483 (gray), #fde74c (yellow),*/
+
+* {
+    box-sizing: border-box;
+    font-weight: normal;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: gray;
+    background-image: url('img/large_landscape.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.navbar-brand {
+    height: 48px;
+}
+
+nav {
+    /* background-color: #1b232c; */
+    /* background-color: #221914;  */
+}
+
+#nav-image {
+    margin-left: 20px;
+}
