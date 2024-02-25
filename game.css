@@ -18,9 +18,29 @@ body {
 
 nav {
     /* background-color: #1b232c; */
-    background-color: #221914; 
+    /* background-color: #221914;  */
 }
 
 #nav-image {
     margin-left: 20px;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link:after {
+    content: '';
+    opacity: 0;
+    transition: all 0.2s;
+    height: 2px;
+    width: 100%;
+    background-color: #fde74c;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-link:hover::after {
+    opacity: 1;
 }
