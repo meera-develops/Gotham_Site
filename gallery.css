@@ -9,19 +9,42 @@
 
 body {
     background-color: gray;
-    background-image: url('img/large_landscape.jpg');
+    background-image: url('img/batcave3.avif');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
+
+@media only screen and (max-width: 600px) {
+    /* Adjust background image size and other styles for phone view */
+    body {
+        background-size: cover;
+    }
+}
+
 
 .navbar-brand {
     height: 48px;
 }
 
-nav {
-    /* background-color: #1b232c; */
-    background-color: #221914; 
+.navbar {
+    background-color: transparent; /* Set default background color to transparent */
 }
+
+.navbar:hover {
+    /* background-color: #221914;  */
+    background-color: #222221;
+    transition: background-color 0.5s;
+}
+
+.navbar .container-fluid {
+    opacity: 1; /* Set default opacity to fully visible */
+    transition: opacity 0.4s; /* Apply transition effect only to opacity */
+}
+
+.navbar:hover .container-fluid {
+    opacity: 1; /* Ensure text remains fully visible on hover */
+}
+
 
 #nav-image {
     margin-left: 20px;
@@ -46,3 +69,27 @@ nav {
 .nav-link:hover::after {
     opacity: 1;
 }
+
+.container {
+    margin-top: 3%;
+}
+
+ .card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  } 
+
+  .row {
+    margin-bottom: 2%;
+  }
+
+  .card-title {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+
+
+
+

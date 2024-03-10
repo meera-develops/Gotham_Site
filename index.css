@@ -25,9 +25,23 @@ p {
     height: 48px;
 }
 
-nav {
-    /* background-color: #1b232c; */
-    background-color: #221914; 
+.navbar {
+    background-color: transparent; /* Set default background color to transparent */
+}
+
+.navbar:hover {
+    /* background-color: #221914; Change background color on hover */
+    background-color: #222221;
+    transition: background-color 0.5s;
+}
+
+.navbar .container-fluid {
+    opacity: 1; /* Set default opacity to fully visible */
+    transition: opacity 0.4s; /* Apply transition effect only to opacity */
+}
+
+.navbar:hover .container-fluid {
+    opacity: 1; /* Ensure text remains fully visible on hover */
 }
 
 #nav-image {
