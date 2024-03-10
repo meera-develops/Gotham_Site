@@ -1,5 +1,10 @@
 /*#8e443d (brown), #498c8a(cyan), #1b232c (black), #7c8483 (gray), #fde74c (yellow),*/
 
+@font-face {
+    font-family: mybat_font;
+    src: url('font/GothamNights-e49g.ttf');
+}
+
 * {
     box-sizing: border-box;
     font-weight: normal;
@@ -74,6 +79,13 @@ body {
     margin-top: 3%;
 }
 
+.card {
+    max-width: 325px;
+}
+
+.card-body {
+    background-color: #222221;
+}
  .card-img-top {
     width: 100%;
     height: 250px;
@@ -85,8 +97,14 @@ body {
   }
 
   .card-title {
+    font-family: mybat_font;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+  }
+
+  .card .card-title {
+    color: white;
   }
 
 
