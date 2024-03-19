@@ -5,11 +5,6 @@
     src: url('font/GothamNights-e49g.ttf');
 }
 
-@font-face {
-    font-family: mybatstrong_font;
-    src: url('font/GothamNightsBold-Wrp4.ttf');
-}
-
 * {
     box-sizing: border-box;
     font-weight: normal;
@@ -62,14 +57,6 @@ body {
 
 .nav-link {
     position: relative;
-    
-}
-
-.navbar .nav-item {
-    font-family: mybatstrong_font, serif;
-    font-size: 1.5rem;
-    letter-spacing: 0.05rem;
-    word-spacing: -5px;
 }
 
 .nav-link:after {
@@ -94,12 +81,10 @@ body {
 
 .card {
     max-width: 325px;
-    background-color: #222221;
 }
 
 .card-body {
     background-color: #222221;
-    padding-bottom: 0;
 }
  .card-img-top {
     width: 100%;
@@ -112,32 +97,12 @@ body {
   }
 
   .card-title {
-    font-family: mybat_font, serif;
+    font-family: mybat_font;
     text-align: center;
     font-size: 2rem;
     letter-spacing: 0.4rem;
   }
 
-  .card-back {
-    font-family: 'arial', serif;
-    text-align: center;
-    font-size: 1rem;
-    letter-spacing: 0.4rem; 
-    color: white;
-    background-color:#222221;
-    margin-bottom: 0;
-  }
-
-
   .card .card-title {
     color: white;
   }
-
-.card.flipped {
-    transform: rotateY(180deg);
-}
-
-
-
-
-

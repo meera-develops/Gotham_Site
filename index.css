@@ -5,6 +5,11 @@
     margin: 0px;
 }
 
+@font-face {
+    font-family: mybatstrong_font;
+    src: url('font/GothamNightsBold-Wrp4.ttf');
+}
+
 body {
     background-color: gray;
     background-image: url('img/large_landscape.jpg');
@@ -50,6 +55,13 @@ p {
 
 .nav-link {
     position: relative;
+}
+
+.navbar .nav-item {
+    font-family: mybatstrong_font, serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    word-spacing: -5px;
 }
 
 .nav-link:after {
