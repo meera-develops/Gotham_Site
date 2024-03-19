@@ -93,8 +93,12 @@ body {
 }
 
 .card {
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
     max-width: 325px;
     background-color: #222221;
+    cursor: pointer;
 }
 
 .card-body {
@@ -125,16 +129,37 @@ body {
     letter-spacing: 0.4rem; 
     color: white;
     background-color:#222221;
-    margin-bottom: 0;
+    padding: 10px 10px 0 10px;
+
+    position: absolute; /* Add position absolute */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Take full width */
+    height: 100%; /* Take full height */
+    backface-visibility: hidden; /* Hide backface initially */
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
   }
+
+  .card-back .content {
+    transform: rotateY(180deg); /* Rotate text back to its original orientation */
+}
 
 
   .card .card-title {
     color: white;
   }
 
-.card.flipped {
-    transform: rotateY(180deg);
+.card.flipped .card-inner {
+    transform: rotateY(0deg); /*this one affects the orientation of bio*/
+}
+
+.card.flipped .card-back {
+    transform: rotateY(0deg); /* Rotate back the back face */
+}
+
+.card.flipped .card-title {
+    visibility: hidden; /* Hide the title when flipped */
 }
 
 
