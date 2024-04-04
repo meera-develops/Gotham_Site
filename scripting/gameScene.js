@@ -1,6 +1,6 @@
 //add pie as collision objects
 //going to shoot out of joker hands
-//keep them running 
+
 //batman has to jump over pies 
 
 class gameScene extends Phaser.Scene {
@@ -14,10 +14,10 @@ class gameScene extends Phaser.Scene {
     preload() {
         this.load.image('background', '../img/myGame/background/dark.webp');
         this.load.image('batSignal', '../img/myGame/background/test.png')
-        this.load.image('batman', '../img/myGame/sprites/batman_crop.gif')
+        this.load.spritesheet('batman', '../img/myGame/sprites/batman_animate2.png', {frameWidth: 162, frameHeight: 148})
         this.load.image('baddie', '../img/myGame/sprites/joker_sprite.png');
+        //this.load.spritesheet('baddie', '../img/myGame/sprites/nes_joker.png', {frameWidth: 160, frameHeight: 160});
         this.load.image('obstaclePie', '../img/myGame/pie.png');
-        //add obstacles
     }
     create() {
         // window.addEventListener('resize', resize);
@@ -26,9 +26,24 @@ class gameScene extends Phaser.Scene {
         const bg = this.add.sprite(590, 300, 'background');
         const signal = this.add.sprite(310, 115, 'batSignal');
         signal.setScale(0.6);
-        this.myHero = this.physics.add.sprite(0, 280, 'batman');
-        this.joker = this.physics.add.sprite(1030, 280, 'baddie');
+        this.myHero = this.physics.add.sprite(0, 309, 'batman');
+        this.joker = this.physics.add.sprite(1030, 299, 'baddie');
         this.joker.setScale(0.7);
+
+        this.anims.create({
+            key: 'batman_moves',
+            frames: this.anims.generateFrameNumbers('batman', { start: 0, end: 11}),
+            frameRate: 26,
+            repeat: -1,
+
+        })
+
+        this.anims.create({
+            key: 'idle',
+            frames: this.anims.generateFrameNumbers('batman', { start: 0, end: 0}),
+            frameRate: 1,
+            repeat: -1
+        })
     
         gameState.cursors = this.input.keyboard.createCursorKeys();
     
@@ -58,12 +73,17 @@ class gameScene extends Phaser.Scene {
     }
     update() {
         if (gameState.cursors.left.isDown) {
-            this.myHero.setVelocityX(-160);
+            this.myHero.setVelocityX(-300);
+            this.myHero.anims.play('batman_moves', true);
+            this.myHero.flipX = true;
         } else if (gameState.cursors.right.isDown) {
-            this.myHero.setVelocityX(200);
+            this.myHero.setVelocityX(300);
+            this.myHero.anims.play('batman_moves', true);
+            this.myHero.flipX = false;
         }
         else {
             this.myHero.setVelocityX(0);
+            this.myHero.anims.play('idle', true);
         }
     
         if (gameState.cursors.space.isDown && this.jumps < 3) {
