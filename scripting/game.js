@@ -22,6 +22,7 @@ const config = {
     physics: {
         default: 'arcade',
         arcade: {
+            debug: false,
             gravity: {y: 300}, //higher number indicates affect of gravity 
             enableBody: true,
         }

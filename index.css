@@ -82,9 +82,24 @@ p {
 
 .transparent-box {
     background-color: rgba(255, 255, 255, 0.5); /* White color with 50% opacity */
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
     border-radius: 10px;
+    margin-bottom: 40px;
   }
+
+.riddler {
+    position: relative;
+    bottom: 10px;
+    left: 135px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.transparent-box > p {
+    font-size: 1.1rem;
+}
+
+
 
 
   
