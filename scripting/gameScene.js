@@ -114,14 +114,22 @@ class gameScene extends Phaser.Scene {
             gameState.score += 5;
             gameState.scoreText.setText( `Score: ${gameState.score}`)
         });
+        this.input.on('pointerdown', () => {
+            if (gameOver) {
+                this.scene.restart();
+            }
+        })
+
+        let gameOver = false;
         this.physics.add.collider(this.myHero, pies, () => {
             this.myHero.anims.stop();
             pieLoop.destroy();
             this.physics.pause();
             this.add.text(460, 250, 'Game Over', { fontSize: '30px', fill: '#ffffff' });
+            this.add.text(425, 300, 'Click to Start Again', {fontSize: '20px', fill: '#ffffff'});
+            gameOver = true;
         })
-        
-        const barWidth = 150;
+                const barWidth = 150;
         const barHeight = 60;
         const barColor = 0xcfd3d4;
         const street = this.add.rectangle(50, 430, barWidth, barHeight, barColor);
