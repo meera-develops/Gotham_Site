@@ -11,10 +11,9 @@
 }
 
 body {
-    background-color: gray;
     background-image: url('img/large_landscape.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .content {
@@ -80,24 +79,21 @@ p {
     opacity: 1;
 }
 
-.transparent-box {
-    background-color: rgba(255, 255, 255, 0.5); /* White color with 50% opacity */
-    padding: 20px 20px 0px 20px;
-    border-radius: 10px;
-    margin-bottom: 40px;
+ .transparent-box {
+    background-color: rgba(0, 0, 0, 0.5); 
+    height: 100vh;
   }
 
 .riddler {
-    position: relative;
+    position: center;
     bottom: 10px;
     left: 135px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+    /* margin-bottom: 0px; */
+    /* padding-bottom: 0px; */
 }
 
-.transparent-box > p {
-    font-size: 1.1rem;
-}
+
+
 
 
 
